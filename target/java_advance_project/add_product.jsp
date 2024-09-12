@@ -49,15 +49,15 @@ prefix="c" %>
 
 <h2>Product Form</h2>
 
-<form action="#">
+<form action="${pageContext.request.contextPath}/product_list" method="post">
   <label for="name">Product Name:</label>
   <input type="text" id="name" name="name" required>
 
   <label for="price">Price:</label>
-  <input type="number" id="price" name="price" min="0" step="0.01" required>
+  <input type="number" id="price" name="price" min="0" required>
 
   <label for="quantity">Quantity:</label>
-  <input type="number" id="quantity" name="quantity" min="1" required>
+  <input type="number" id="quantity" name="quantity" required>
 
   <button type="submit">Submit</button>
 </form>

@@ -49,7 +49,7 @@ prefix="c" %>
 
 <h2>Product Form</h2>
 
-<form action="/addProduct" method="post">
+<form action="${pageContext.request.contextPath}/product_list" method="post">
   <label for="name">Product Name:</label>
   <input type="text" id="name" name="name" required>
 

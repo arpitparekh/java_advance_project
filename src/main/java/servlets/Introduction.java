@@ -23,7 +23,7 @@ public class Introduction extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 				throws ServletException, IOException {
 
-        String message = "Hello from Yuvraj!";
+        String message = "Hello from Sumit!";
         request.setAttribute("message", message);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("index.jsp");

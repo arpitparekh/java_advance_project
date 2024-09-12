@@ -22,7 +22,7 @@ public class JobsDatabaseConnect {
       statement = connection.createStatement();
 
     } catch (SQLException e) {
-      e.printStackTrace();
+        System.out.println(e.getMessage());
     }
   }
 
@@ -35,6 +35,7 @@ public class JobsDatabaseConnect {
       System.out.println("Table created successfully");
 
     } catch (SQLException e) {
+      System.out.println(e.getMessage());
     }
   }
 
@@ -46,7 +47,8 @@ public class JobsDatabaseConnect {
       System.out.println("Data successfully");
 
     } catch (SQLException e) {
+      System.out.println(e.getMessage());
     }
   }
-  
+
 }
