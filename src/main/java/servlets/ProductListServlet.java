@@ -14,10 +14,10 @@ public class ProductListServlet extends HttpServlet {
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-    String name = (String)req.getParameter("name");
-    String price = (String)req.getParameter("price");
-    String quantity = (String)req.getParameter("quantity");
+    
+    String name = (String) req.getParameter("name");
+    String price = (String) req.getParameter("price");
+    String quantity = (String) req.getParameter("quantity");
 
     req.setAttribute("name", name);
     req.setAttribute("price", price);
@@ -29,7 +29,7 @@ public class ProductListServlet extends HttpServlet {
 
   @Override
   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
     doGet(req, resp);
   }
+
 }
