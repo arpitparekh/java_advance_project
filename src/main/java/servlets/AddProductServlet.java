@@ -2,6 +2,7 @@ package servlets;
 
 import java.io.IOException;
 
+import database.ProductDatabase;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -27,11 +28,10 @@ public class AddProductServlet extends HttpServlet {
     String price = request.getParameter("price");
     String quantity = request.getParameter("quantity");
 
-    System.out.println(name + " " + price + " " + quantity);
-
-    request.setAttribute("name", name);
-    request.setAttribute("price", price);
-    request.setAttribute("quantity", quantity);
+    ProductDatabase productDatabase = new ProductDatabase("yuvraj_batch");
+    productDatabase.createTable("product");
+    productDatabase.insertData(name, Float.parseFloat(price), Integer.parseInt(quantity));
+    productDatabase.closeConnection();
 
     RequestDispatcher dispatcher = request.getRequestDispatcher("product_list.jsp");
     dispatcher.forward(request, response);
