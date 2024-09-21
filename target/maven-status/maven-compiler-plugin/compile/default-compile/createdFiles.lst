@@ -1,5 +1,5 @@
-servlets/App.class
 servlets/AddProductServlet.class
+servlets/App.class
 servlets/ProductListServlet.class
 database/ProductDatabase.class
 servlets/Introduction.class
